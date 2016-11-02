@@ -1665,7 +1665,7 @@ public class FileDisplayActivity extends HookActivity
     }
 
     private void tryStopPlaying(OCFile file){
-        if (mMediaServiceConnection != null && file.isAudio()){
+        if (mMediaServiceConnection != null && MimeTypeUtil.isAudio(file)){
             if (mMediaServiceBinder.isPlaying(file)){
                 mMediaServiceBinder.pause();
             }
